@@ -27,12 +27,12 @@ public class BaseTest extends Flib implements Ioconstant {
 		
 	}
 }
-	@AfterMethod
-	public void close()
-	{
-		driver.close();
+	//@AfterMethod
+	//public void close()
+	//{
+		//driver.close();
 		
-	}
+	//}
 }
 		
 

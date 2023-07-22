@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="8594" started-at="2023-07-22T17:28:05 IST" finished-at="2023-07-22T17:28:13 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="8594" started-at="2023-07-22T17:28:05 IST" finished-at="2023-07-22T17:28:13 IST">
+      <class name="testpacakage.LogoutTestCase">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testpacakage.LogoutTestCase@22eeefeb]" name="setup" is-config="true" duration-ms="5910" started-at="2023-07-22T17:28:05 IST" finished-at="2023-07-22T17:28:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="Logout()[pri:0, instance:testpacakage.LogoutTestCase@22eeefeb]" name="Logout" duration-ms="2620" started-at="2023-07-22T17:28:11 IST" finished-at="2023-07-22T17:28:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+      </class> <!-- testpacakage.LogoutTestCase -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -18,8 +18,8 @@ public class LoginTextCase extends BaseTest {
 	{
 		LoginPage lp = new LoginPage(driver);
 		Flib fi = new Flib();
-		lp.validLogin(fi.readExcelData(Excelpath, "validcred", 1, 0),fi.readExcelData(Excelpath, "validcred", 0, 1));
-		String Expectedresult="Account Login";
+		lp.validLogin(fi.readExcelData(Excelpath, "validcred", 1, 0),fi.readExcelData(Excelpath, "validcred", 1, 1));
+		String Expectedresult="My Account";
 		String Actualresult=driver.getTitle();
 		Assert.assertEquals(Actualresult, Expectedresult);
 	}
@@ -35,4 +35,14 @@ public class LoginTextCase extends BaseTest {
 		}
 
      }
+	@Test
+	public void forPassLink()
+	{ 
+		LoginPage l = new LoginPage(driver);
+		l.forpass();
+		String ExpectedResult="Forgot Your Password?";
+		String ActualResult=driver.getTitle();
+		Assert.assertEquals(ActualResult, ExpectedResult);
+	   
+	}
 }

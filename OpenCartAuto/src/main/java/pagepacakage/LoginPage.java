@@ -11,6 +11,7 @@ public class LoginPage {
 	@FindBy(name="email")private WebElement emailTB;
 	@FindBy(name="password")private WebElement passTB;
 	@FindBy(xpath = "//input[@class='btn btn-primary']")private WebElement loginbtn;
+	@FindBy(linkText = "Forgotten Password")private WebElement forpasslink;
 	public LoginPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
@@ -35,6 +36,10 @@ public class LoginPage {
 	{
 		return loginbtn;
 	}
+	public WebElement getForPass()
+	{
+		return forpasslink;
+	}
 	public void validLogin(String validemail,String validpass) 
 	{
        accLink.click();
@@ -51,7 +56,12 @@ public class LoginPage {
 	       passTB.sendKeys(invalidpasss);
 	       loginbtn.click();
 	       
-		
+	}
+	public void forpass()
+	{
+		accLink.click();
+		login.click();
+		forpasslink.click();
 	}
 	
 
