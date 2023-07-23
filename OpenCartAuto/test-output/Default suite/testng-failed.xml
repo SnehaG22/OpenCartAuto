@@ -5,8 +5,9 @@
     <classes>
       <class name="testpacakage.LogoutTestCase">
         <methods>
+          <include name="Login"/>
           <include name="setup"/>
-          <include name="Logout"/>
+          <include name="closingBrowser"/>
         </methods>
       </class> <!-- testpacakage.LogoutTestCase -->
     </classes>

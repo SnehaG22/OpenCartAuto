@@ -1,20 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="2" total="3" passed="0">
   <reporter-output>
+    <line>
+      <![CDATA[Browser Opened and Tsrt will Start]]>
+    </line>
+    <line>
+      <![CDATA[Test Failed due to:closingBrowser]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8594" started-at="2023-07-22T17:28:05 IST" finished-at="2023-07-22T17:28:13 IST">
+  <suite name="Default suite" duration-ms="20918" started-at="2023-07-23T13:43:44 IST" finished-at="2023-07-23T13:44:04 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8594" started-at="2023-07-22T17:28:05 IST" finished-at="2023-07-22T17:28:13 IST">
+    <test name="Default test" duration-ms="20918" started-at="2023-07-23T13:43:44 IST" finished-at="2023-07-23T13:44:04 IST">
       <class name="testpacakage.LogoutTestCase">
-        <test-method status="PASS" signature="setup()[pri:0, instance:testpacakage.LogoutTestCase@22eeefeb]" name="setup" is-config="true" duration-ms="5910" started-at="2023-07-22T17:28:05 IST" finished-at="2023-07-22T17:28:10 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testpacakage.LogoutTestCase@396e2f39]" name="setup" is-config="true" duration-ms="7843" started-at="2023-07-23T13:43:44 IST" finished-at="2023-07-23T13:43:51 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Logout()[pri:0, instance:testpacakage.LogoutTestCase@22eeefeb]" name="Logout" duration-ms="2620" started-at="2023-07-22T17:28:11 IST" finished-at="2023-07-22T17:28:13 IST">
+        <test-method status="PASS" signature="Login()[pri:0, instance:testpacakage.LogoutTestCase@396e2f39]" name="Login" is-config="true" duration-ms="2351" started-at="2023-07-23T13:43:51 IST" finished-at="2023-07-23T13:43:54 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Logout -->
+        </test-method> <!-- Login -->
+        <test-method status="FAIL" signature="closingBrowser()[pri:0, instance:testpacakage.LogoutTestCase@396e2f39]" name="closingBrowser" duration-ms="9416" started-at="2023-07-23T13:43:54 IST" finished-at="2023-07-23T13:44:03 IST">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Your Store expected [My Account] but found [Your Store]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Your Store expected [My Account] but found [Your Store]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at testpacakage.LogoutTestCase.closingBrowser(LogoutTestCase.java:60)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[Browser Opened and Tsrt will Start]]>
+            </line>
+            <line>
+              <![CDATA[Test Failed due to:closingBrowser]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closingBrowser -->
       </class> <!-- testpacakage.LogoutTestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
