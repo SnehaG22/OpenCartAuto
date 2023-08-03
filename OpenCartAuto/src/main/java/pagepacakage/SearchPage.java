@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class SearchPage {
 	@FindBy(name="search")private WebElement searchTF;
@@ -14,11 +15,23 @@ public class SearchPage {
 	@FindBy(id = "input-search")private WebElement inputTF;
 	@FindBy(name = "description")private WebElement checkBox;
 	@FindBy(id = "button-search")private WebElement btn;
+	@FindBy(name="category_id")private WebElement categorybtn;
+	@FindBy(name="sub_category")private WebElement subCeckbox;
+	@FindBy(xpath ="//a[text()='iMac']")private WebElement subcateassertion;
+	@FindBy(id="input-sort")private WebElement sortBy;
 	
 	
 	public SearchPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
+	}
+	public WebElement getSortBy()
+	{
+		return sortBy;
+	}
+	public WebElement getsubcateassertion()
+	{
+		return subcateassertion;
 	}
 	public WebElement getSearchTF()
 	{
@@ -28,7 +41,7 @@ public class SearchPage {
 	{
 		return searchbtn;
 	}
-	public WebElement getText()
+	public WebElement getTextAssertion()
 	{
 		return text;
 	}
@@ -44,6 +57,14 @@ public class SearchPage {
 	{
 		return btn;
 	}
+	public WebElement getcategory()
+	{
+		return categorybtn;
+	}
+	public WebElement getSubCheckBox()
+	{
+		return subCeckbox;
+	}
 	
 	public void searchProduct(String productname)
 	{
@@ -56,7 +77,21 @@ public class SearchPage {
 		inputTF.sendKeys(Text);
 		checkBox.click();
 		btn.click();
-		
+	}
+	public void selectSubCate(String Text , String name )
+	{
+		searchbtn.click();
+		inputTF.sendKeys(Text);
+		getcategory().click();
+        Select dropdown = new Select(getcategory());
+		 dropdown.selectByVisibleText(name);
+		subCeckbox.click();
+		btn.click();
+  }
+	public void sortBy(String sortValue) 
+	{  
+		Select sel = new Select(sortBy);
+		sel.selectByVisibleText(sortValue);
 	}
 
 }

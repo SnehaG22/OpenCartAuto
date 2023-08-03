@@ -6,11 +6,14 @@ import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
+import generic.CoustomeListners;
 import generic.Flib;
 import pagepacakage.LoginPage;
+@Listeners(CoustomeListners.class)
 
 public class LoginTextCase extends BaseTest {
 	@Test

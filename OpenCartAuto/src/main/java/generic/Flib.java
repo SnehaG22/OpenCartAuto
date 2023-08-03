@@ -6,24 +6,26 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.usermodel.Cell;
+
+
 
 public class Flib {
 	//it is used to store gemeric resuable methods
-	public String readExcelData(String excelpath, String Sheetname,int row,int cell) throws EncryptedDocumentException, IOException
+	public String readExcelData(String excelpath, String Sheetname,int row,int cell) throws EncryptedDocumentException, IOException 
 	{
 		FileInputStream fil = new FileInputStream(excelpath);
 		Workbook wb = WorkbookFactory.create(fil);
 		Sheet sheet = wb.getSheet(Sheetname);
 		Row r = sheet.getRow(row);
-		Cell c = r.getCell(cell);
+	    Cell c = r.getCell(cell);
 		String data = c.getStringCellValue();
 		return data;
-	}
+		}
 	public String readPropertyData(String propath,String key) throws IOException 
 	{
 		FileInputStream fil = new FileInputStream(propath);
@@ -37,7 +39,7 @@ public class Flib {
 	{
 		    FileInputStream fil = new FileInputStream(excelpath);
 	        Workbook wb = WorkbookFactory.create(fil);
-	         Sheet sheet = wb.getSheet(sheetname);
+	         org.apache.poi.ss.usermodel.Sheet sheet = wb.getSheet(sheetname);
 	         int rowc = sheet.getLastRowNum();
 	         return rowc;
 		

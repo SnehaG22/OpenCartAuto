@@ -59,9 +59,6 @@ public class LogoutTestCase extends BaseTest {
 		String ActualResult=driver.getTitle();
 		Assert.assertEquals(ActualResult, ExpectedResult, ActualResult);
 		
-	
-		
-		
 	}
 
 	
